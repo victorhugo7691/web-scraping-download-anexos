@@ -18,8 +18,12 @@ public class Application {
         final Configuracao config = new Configuracao();
         
         try {
-            final Document doc = Jsoup.connect(config.getLinkDoSite()).get();
-            System.out.print(doc);
+            final Document documento = Jsoup.connect(config.getLinkDoSite()).get();
+            System.out.print(documento.getElementsContainingOwnText("Anexo I"));
+            
+            // final Elements elemento = documento.select("Anexo I");
+            
+            // System.out.println(elemento);
         } catch (final IOException e) {
             e.printStackTrace();
         }
