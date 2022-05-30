@@ -15,6 +15,9 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	// jsoup HTML parser library @ https://jsoup.org/
+	implementation 'org.jsoup:jsoup:1.15.1'
 }
 
 tasks.named('test') {
